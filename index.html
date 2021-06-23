@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking clock | Nepathya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="time"></div>
+</body>
+<style>
+    body {
+        font-size: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Bad Script', cursive;
+    }
+</style>
+<script>function checkTime(e) { return e < 10 && (e = "0" + e), e } function getRandomColor() { for (var e = "#", t = 0; t < 6; t++)e += "0123456789ABCDEF"[Math.floor(16 * Math.random())]; return e } function startTime() { var e = new Date, o = e.getHours(), n = e.getMinutes(), r = e.getSeconds(); n = checkTime(n), r = checkTime(r), document.getElementById("time").innerHTML = o + ":" + n + ":" + r, t = setTimeout(function () { startTime(), document.body.style.backgroundColor = getRandomColor() }, 1e3) } startTime();</script>
+
+</html>
