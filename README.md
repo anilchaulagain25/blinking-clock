@@ -1,3 +1,3 @@
 # blinking-clock
->run this
+>run this ?
 >goto https://blinking-clock.anilc.com.np/
